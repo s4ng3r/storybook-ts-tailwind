@@ -9,7 +9,9 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build:rollup": "rollup -c --bundleConfigAsCjs"
+    "build:rollup": "rollup -c --bundleConfigAsCjs",
+    "prepublishOnly": "npm run build:rollup"
+
   },
   "dependencies": {
     "@next/font": "13.1.1",

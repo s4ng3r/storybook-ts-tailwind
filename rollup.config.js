@@ -13,12 +13,14 @@ export default {
     {
       file: "build/index.js",
       format: "cjs",
-      sourcemap: true
+      sourcemap: true,
+      exports: 'named',
     },
     {
       file: "build/index.es.js",
       format: "esm",
-      sourcemap: true
+      sourcemap: true,
+      exports: 'named',
     }
   ],
   plugins: [
@@ -27,5 +29,6 @@ export default {
     commonjs(),
     typescript({ tsconfig: './rollup.tsconfig.json' }),
     postcss()
-  ]
+  ],
+  external: ['react', 'react-dom'],
 };
